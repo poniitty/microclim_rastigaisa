@@ -9,7 +9,8 @@ library(zoo)
 mind <- as.Date("2018-06-01", tz = "Etc/GMT-2")
 maxd <- as.Date("2022-08-04", tz = "Etc/GMT-2")
 
-raw_data_dir <- "E:/RASTI22"
+# raw_data_dir <- "E:/RASTI22"
+raw_data_dir <- "/scratch/project_2003061/microclim/RASTI22"
 
 #################################################################################3
 # Read year 2020 site visiting times
