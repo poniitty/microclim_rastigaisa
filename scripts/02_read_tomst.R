@@ -1,4 +1,3 @@
-
 library(tidyverse)
 library(lubridate)
 library(data.table)
@@ -1187,14 +1186,6 @@ for(i in unique(df3$site_id)){
     filter(!(site_id == i & mins %in% as.numeric(names(tb))))
   
 }
-
-####################################################################
-# MASK IMPOSSIBLE VALUES
-
-df3 %>% mutate(T1 = ifelse(T1 < (-60) | T1 > 50, NA, T1),
-               T2 = ifelse(T2 < (-60) | T2 > 50, NA, T2),
-               T3 = ifelse(T3 < (-60) | T3 > 50, NA, T3),
-               moist = ifelse(moist < 200 | moist >= 4096, NA, moist)) -> df3
 
 ###############################################################################
 # PLOT CORRECTED
